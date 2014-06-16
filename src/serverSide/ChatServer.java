@@ -44,7 +44,6 @@ public class ChatServer {
 			names += c.getName() + "\n";
 		}
 		for (Chatter c: chatters){
-			System.out.println(c.getName());
 			c.sendMessage(names + "_END_");
 		}
 	}
@@ -58,7 +57,6 @@ public class ChatServer {
 				if (c.hasNewLine()){
 					String s = c.getName() + ": " + c.readLine();
 					for (Chatter k: chatters){
-						System.out.println("should be twice");
 						k.sendMessage(s);
 					}
 				}
